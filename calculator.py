@@ -19,6 +19,10 @@ def divide(a, b):
     return a / b
 
 
+def power(base, exp):
+    return base ** exp
+
+
 def average(numbers):
     """Return the arithmetic mean of a list of numbers."""
     if not numbers:

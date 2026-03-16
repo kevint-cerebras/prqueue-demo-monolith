@@ -1,6 +1,6 @@
 """Tests for calculator module."""
 
-from calculator import add, subtract, multiply, divide, average
+from calculator import add, subtract, multiply, divide, average, power
 
 
 def test_add():
@@ -29,6 +29,16 @@ def test_divide_by_zero():
         assert False, "Expected an error"
     except ZeroDivisionError:
         pass
+
+
+def test_power():
+    assert power(2, 3) == 8
+    assert power(5, 2) == 25
+
+
+def test_power_zero_exponent():
+    assert power(2, 0) == 1
+    assert power(100, 0) == 1
 
 
 def test_average():
