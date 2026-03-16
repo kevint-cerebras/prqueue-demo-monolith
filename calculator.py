@@ -19,6 +19,12 @@ def divide(a, b):
     return a / b
 
 
+def modulo(a, b):
+    if b == 0:
+        raise ValueError("Cannot modulo by zero")
+    return a % b
+
+
 def average(numbers):
     """Return the arithmetic mean of a list of numbers."""
     if not numbers:

@@ -1,6 +1,6 @@
 """Tests for calculator module."""
 
-from calculator import add, subtract, multiply, divide, average
+from calculator import add, subtract, multiply, divide, modulo, average
 
 
 def test_add():
@@ -28,6 +28,19 @@ def test_divide_by_zero():
         divide(1, 0)
         assert False, "Expected an error"
     except ZeroDivisionError:
+        pass
+
+
+def test_modulo():
+    assert modulo(10, 3) == 1
+    assert modulo(7, 2) == 1
+
+
+def test_modulo_by_zero():
+    try:
+        modulo(1, 0)
+        assert False, "Expected an error"
+    except ValueError:
         pass
 
 
